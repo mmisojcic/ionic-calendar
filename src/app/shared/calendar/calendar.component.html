@@ -1,0 +1,22 @@
+<ion-grid>
+  <ion-row class="modal-controls" *ngIf="modalCloseButton">
+    <ion-button fill="clear" color="dark" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-row>
+  <app-calendar-header (monthChange)="onMonthChange($event)" [monthSection]="monthSection"></app-calendar-header>
+  <ion-row>
+    <app-week-days class="width-100" [weekDayNameLength]="weekDayNameLength"></app-week-days>
+  </ion-row>
+  <ion-row style="overflow: hidden">
+    <div #month class="width-100">
+      <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let day of monthSection.days" size="1.714285" offset="0">
+            <app-day [day]="day" (selectDay)="onSelectDay($event)"></app-day>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-row>
+</ion-grid>

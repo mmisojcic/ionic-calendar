@@ -1,0 +1,43 @@
+.day {
+  position: relative;
+  overflow: hidden;
+
+  margin: 0 auto;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.side-month {
+  color: var(--ion-color-medium-shade);
+  font-weight: 200;
+}
+.today {
+  background-color: var(--ion-color-primary);
+  color: var(---ion-text-dark);
+}
+.sunday {
+  // color: var(--ion-color-medium-shade);
+}
+.disabled-day {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-color: rgba(#383a3e, 0.5);
+}
+.scheduled-day {
+  border: 4px solid var(--ion-color-success-tint);
+}
+.selected {
+  background-color: rgba(var(--ion-color-primary-rgb), 0.5);
+  color: var(---ion-text-dark);
+}

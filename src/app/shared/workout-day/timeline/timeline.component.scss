@@ -1,0 +1,56 @@
+$time-margin: 80px;
+
+.timeline {
+  position: relative;
+  height: max-content;
+
+  div:last-child {
+    margin-bottom: 0;
+  }
+
+  &_time {
+    position: relative;
+
+    height: 0;
+    margin-bottom: $time-margin;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 101;
+
+    color: var(--ion-text-dark);
+
+    &-label {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &-marker {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(calc(50% + 1px), -50%);
+
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--ion-color-dark);
+      background: var(--ion-color-primary);
+    }
+  }
+
+  &_line {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+
+    z-index: 100;
+    width: 2px;
+    background-color: var(--ion-color-dark);
+  }
+}

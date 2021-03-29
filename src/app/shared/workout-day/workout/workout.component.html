@@ -1,0 +1,9 @@
+<div
+  class="workout"
+  [ngStyle]="{
+    height: setHeight(),
+    marginBottom: setMarginBottom()
+  }"
+>
+  {{ (workout.endTime - workout.startTime) / 1000 / 60 / 60 }}h
+</div>

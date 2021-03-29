@@ -1,0 +1,31 @@
+.calendar-header {
+  width: 100%;
+}
+
+.month-year {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  &_mm {
+    text-transform: capitalize;
+    width: fit-content;
+  }
+
+  &_yyyy {
+    margin-left: 0.3rem;
+    justify-content: flex-start;
+  }
+}
+
+.present-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next {
+  display: flex;
+  justify-content: flex-end;
+}

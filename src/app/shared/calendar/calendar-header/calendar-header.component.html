@@ -1,0 +1,33 @@
+<div class="calendar-header">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <div class="month-year">
+          <ion-button fill="clear" color="dark" size="small" (click)="showPicker()">
+            <ion-icon name="ellipsis-vertical" slot="start"></ion-icon>
+          </ion-button>
+          <div class="month-year_mm">{{ monthSection.monthName }}</div>
+          <div class="month-year_yyyy">{{ monthSection.year }}</div>
+        </div>
+      </ion-col>
+
+      <ion-col size="2" class="present-time">
+        <ion-button fill="clear" color="dark" size="small" (click)="onPresentMonth()">
+          <ion-icon name="radio-button-on" *ngIf="isPresentTime()"></ion-icon>
+          <ion-icon name="radio-button-off" *ngIf="!isPresentTime()"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="5">
+        <div class="next">
+          <ion-button (click)="onChangeMonth(arrow.BACK)" fill="clear" [disabled]="isYearsRangeBoundary(arrow.BACK)">
+            <ion-icon name="chevron-back"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onChangeMonth(arrow.FORWARD)" fill="clear" [disabled]="isYearsRangeBoundary(arrow.FORWARD)">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

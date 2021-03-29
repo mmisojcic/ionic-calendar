@@ -1,0 +1,16 @@
+.week-days {
+  width: 100% !important;
+  border-bottom: 1px solid var(--ion-color-light-shade);
+
+  &_day-name {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: var(--ion-color-medium-shade);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+  }
+}
+// .sunday {
+//   color: var(--ion-color-danger);
+// }

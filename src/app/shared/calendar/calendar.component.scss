@@ -1,0 +1,10 @@
+.width-100 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.modal-controls {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--ion-color-light-shade);
+}

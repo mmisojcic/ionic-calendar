@@ -1,0 +1,17 @@
+<app-workout-day-header [selectedDay]="selectedDay" (dayChange)="onDayChange($event)"></app-workout-day-header>
+<div class="workout-day">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <app-timeline [workTime]="workTime"></app-timeline>
+      </ion-col>
+      <ion-col size="9">
+        <app-workout
+          *ngFor="let workout of workouts; let i = index"
+          [workout]="workout"
+          [nextWorkout]="workouts[i === workouts.length - 1 ? i : i + 1]"
+        ></app-workout>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

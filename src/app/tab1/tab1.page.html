@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <app-calendar
+    (selectDay)="onSelectDay($event)"
+    [daysToDisable]="[1608396475115, 1606772946000]"
+    [scheduledDays]="[1609027200000,1608508800000]"
+    [yearsRange]="2"
+  ></app-calendar>
 </ion-content>

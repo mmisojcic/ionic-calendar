@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  background-color: var(--ion-tab-bar-background, var(--ion-background-color, #fff));
+  border-bottom: 1px solid var(--ion-color-light-shade);
+
+  &_day-month {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    &-mm {
+      text-transform: uppercase;
+      justify-content: flex-start;
+    }
+
+    &-dd {
+      text-transform: capitalize;
+      width: fit-content;
+      margin-left: 0.2rem;
+    }
+
+    &-label {
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+  }
+}
+
+.present-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevrons {
+  display: flex;
+  justify-content: flex-end;
+}

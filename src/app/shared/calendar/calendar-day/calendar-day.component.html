@@ -1,0 +1,12 @@
+<div *ngIf="!day">&nbsp;</div>
+
+<div
+  *ngIf="day"
+  class="day ion-activatable"
+  [ngClass]="{ today: isToday(), 'side-month': day.sideMonth, sunday: isSunday(), 'scheduled-day': day.scheduled, selected: day.selected }"
+  (click)="onDay()"
+>
+  {{ day.number }}
+  <ion-ripple-effect *ngIf="!day.disabled"></ion-ripple-effect>
+  <div class="disabled-day" *ngIf="day.disabled"></div>
+</div>
